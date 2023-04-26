@@ -1,0 +1,65 @@
+**Proposal For DragonCapsule Governance Token**
+**** DRC-0001 （DragonCapsule Request for Comment）****
+
+---
+Dip: 2301
+title: DragonCapsule Governance Token Proposal Requests
+author:  @okayama.shatoshi
+type: Reauest Track
+category: DRC
+status: Request
+created: 2023-04-05
+---
+
+## Simple Summary
+
+A DragonCapsule Governance Token Proposal Request.
+
+## Abstract
+The following proposal suggest supporting Tally.xyz  (Base on OpenZeppelin Governor Standard for on-chain DAOs)，Trusted by the largest DAOs (Uniswap, AAVE, ENS, Nouns, Gitcoin, Compound)；
+
+The Prpposal expects governance tokens to implement the relevant standard, like https://eips.ethereum.org/EIPS/eip-20 or  https://eips.ethereum.org/EIPS/eip-721. Also, Tally.xyz needs the token contract to implement the https://eips.ethereum.org/EIPS/eip-5805 for delegation and voting power checkpointing. 
+
+
+## Motivation
+implement A standard governance frame process allows Holders of DragonCapsule NFT can vote for YieldDAO proposals throught stander ERC721 and ERC20 governor token
+
+## Specification
+
+### ERC721-ERC20 Universal Governance Token Model
+To be compatible with the Tally app, this proposal recommend to use OpenZeppelin's library https://docs.openzeppelin.com/contracts/4.x/api/governance. and we will supporting ERC721-ERC20 governance token Swaping model
+
+#### Governance Token stander 
+ `"ERC721:ERC20"`
+Governance Token Implement Ref:https://docs.tally.xyz/user-guides/tally-contract-compatibility/tokens-erc20-and-nfts
+
+#### ERC20 Token name
+ `"DragonCapsule Governance Token"`
+
+#### ERC20 Token symbol
+ `"DC"`
+
+#### ERC20 Token TotalSupply
+ `"DC totalSupply：1,000,000,000,000 "`
+
+#### ERC721-ERC20 Token Pair Exchange Rate
+ `"ERC721:ERC20 - 1:100,000,000 "`
+
+## Implementation
+
+There are already some mature  ERC721/ ERC20-compliant related Auto Swap entities deployed on the Ethereum network.
+Different implementations have different trade-offs, choosing a third-party standard open source architecture to implement Governance Token swap LEGO infrastructure is the best choice。
+
+Tally.xyz is our first  Governance infra candidate ; and SudoSwap（a Fully on-chain NFT AMM protocol） provided us with a ERC721-ERC20 token swap implementation technical solution, and became the proposal‘s first ERC721-ERC20 swap candidate.
+
+### Candidate implementations are available at
+
+- [DAO Governance](https://tally.xyz)
+- [ERC721-ERC20 Swap](https://sudoswap.xyz)
+
+## History
+Historical links related to this standard:
+- Original proposal : https://github.com/DragonCapsule/DRCs/DRC-2301.md
+
+## Copyright
+Copyright and related rights waived via [CC0].
